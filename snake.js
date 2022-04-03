@@ -2,12 +2,6 @@
   var canvas = document.getElementById("canvas");
   var ctx = canvas.getContext('2d');
 
-    
-    ctx.fillStyle = "rgb(255,255,255)";
-    ctx.fillRect (10, 10, 55, 50);
-
-    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-    ctx.fillRect (30, 30, 55, 50);
 
 class Snake{
     constructor(x,y,tail){
@@ -16,6 +10,30 @@ class Snake{
       this.tail =[{x:this.x, y:this.y}];
     }
     draw(){
+    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+    ctx.fillRect (canvas.width/2, canvas.height/2 , 10,10);
+    requestAnimationFrame(this.draw);
+    }
+    move(){
+
+    
 
     }
+      
+     
+
+    
+    rotate(){
+
+    }
+
 }
+
+let point= () =>{
+
+}
+
+
+
+let snake = new Snake(60,60,25);
+snake.draw();
