@@ -12,10 +12,10 @@ class Snake{
     draw(){
     ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
     ctx.fillRect (canvas.width/2, canvas.height/2 , 10,10);
-    requestAnimationFrame(this.draw);
+    
     }
     move(){
-
+    
     
 
     }
@@ -29,11 +29,14 @@ class Snake{
 
 }
 
-let point= () =>{
 
+function point(){
+var py = Math.random()*(canvas.height - canvas.height/2) - (canvas.height/2);
+var px = Math.random()*(canvas.width - canvas.width/2) - (canvas.width/2);
+ctx.fillStyle = "rgb(255,0,0)";
+ctx.fillRect(px,py,5,5);
 }
+point();
 
-
-
-let snake = new Snake(60,60,25);
+let snake = new Snake();
 snake.draw();
